@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        winterduvet: "#feffdf",
+        valleyoftears: "#d6e1e5",
       },
     },
   },

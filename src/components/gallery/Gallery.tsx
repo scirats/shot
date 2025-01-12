@@ -13,7 +13,7 @@ const Gallery: React.FC<GalleryProps> = ({ openModal }) => {
         <div
           key={index}
           onClick={() => openModal(item)}
-          className="cursor-pointer bg-gray-200 hover:bg-gray-300 p-6 rounded-lg text-center shadow-md"
+          className="cursor-pointer bg-gray-200 hover:bg-gray-300 p-6 text-center"
         >
           {item}
         </div>

@@ -1,28 +1,15 @@
 'use client';
 
-import Gallery from '@/components/Gallery';
-import Modals from '@/components/Modals';
-import useModalState from '@/hooks/useModalState';
+import Gallery from '@/components/gallery/Gallery';
+import GalleryModal from '@/components/gallery/GalleryModal';
+import useGallery from '@/hooks/useGallery';
 
 export default function Home() {
-  const {
-    selectedItem,
-    isUploadOpen,
-    openModal,
-    closeModal,
-    toggleUploadModal,
-  } = useModalState();
-
+  const { openModal, selectedItem, closeModal } = useGallery();
   return (
     <div>
-      <button onClick={toggleUploadModal}>Open upload modal</button>
       <Gallery openModal={openModal} />
-      <Modals
-        selectedItem={selectedItem}
-        isUploadOpen={isUploadOpen}
-        closeModal={closeModal}
-        toggleUploadModal={toggleUploadModal}
-      />
+      <GalleryModal selectedItem={selectedItem} closeModal={closeModal}/>
     </div>
   );
 }
