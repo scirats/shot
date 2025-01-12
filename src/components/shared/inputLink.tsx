@@ -19,7 +19,7 @@ const InputLink = ({url} : InputLinkProps) => {
         type="text"
         readOnly
         value={url}
-        className="text-sm italic flex-1 border border-gray-300 px-2 py-1"
+        className="text-sm flex-1"
       />
       <button
         onClick={copyToClipboard}

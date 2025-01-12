@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import UploadModal from "@/components/upload/UploadModal";
+import Header from "@/components/layouts/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "shot",
+  title: "Shot",
   description: "Image to Url",
 };
 
@@ -26,11 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-8 my-0`}
       >
-        <header className="header">
-          <UploadModal />
-        </header>
+        <Header />
         {children}
       </body>
     </html>
