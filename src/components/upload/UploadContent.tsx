@@ -9,6 +9,8 @@ type UploadContentProps = {
   getDropzoneProps: () => any;
   getInputProps: () => any;
   isDragActive: boolean;
+  tags: string[];
+  onTagsChange: (input: string) => void;
 };
 
 const UploadContent = ({
@@ -18,6 +20,8 @@ const UploadContent = ({
   getDropzoneProps,
   getInputProps,
   isDragActive,
+  tags,
+  onTagsChange,
 }: UploadContentProps) => {
   if (isFetching) {
     return (
@@ -36,6 +40,7 @@ const UploadContent = ({
             <>
               <PreviewImage imageUrl={image.secure_url} /> 
               <InputLink url={image.secure_url} />
+              {tags ? (<p className="text-sm text-gray-500 m-4">Tags: {tags.join(", ")}</p>) : (<></>)}
             </>
           }
         </div>
@@ -48,6 +53,14 @@ const UploadContent = ({
               getInputProps={getInputProps}
               isActive={isDragActive}
           />
+          <div className="flex">
+            <p className="p-2">Tags:</p>
+            <input
+              type="text"
+              placeholder="nature, animals..."
+              onChange={e => onTagsChange(e.target.value)}
+            />
+          </div>
         </>
       )}
     </div>

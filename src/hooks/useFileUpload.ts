@@ -8,22 +8,19 @@ export const useFileUpload = () => {
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  const resetUploadState = () => {
+  const resetUploadFileState = () => {
     setImage(null);
     setIsFetching(false);
     setIsSuccess(false);
     setError(null);
   };
 
-  const uploadImage = async (file: File) => {
+  const uploadImage = async (file: File, tags: string[]) => {
     setIsFetching(true);
     setError(null);
 
-    const formData = new FormData();
-    formData.append("file", file);
-
     try {
-      const data = await uploadFile(file);
+      const data = await uploadFile({file, tags});
       setImage(data);
       setIsSuccess(true);
     } catch (error) {
@@ -39,7 +36,7 @@ export const useFileUpload = () => {
     isFetching,
     isSuccess,
     uploadImage,
-    resetUploadState,
+    resetUploadFileState,
     error,
   };
 };

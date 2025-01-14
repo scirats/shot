@@ -4,6 +4,7 @@ export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
     const file = formData.get("file") as File | null;
+    const tags = formData.get("tags") as string | null;
 
     if (!file) {
       return NextResponse.json(
@@ -11,10 +12,13 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
+    const parsedTags = tags ? JSON.parse(tags) : [];
+
     await new Promise(resolve => setTimeout(resolve, 3000));
 
     const fakeResponse = {
       secure_url: "https://www.shutterstock.com/image-vector/img-vector-icon-design-on-260nw-2164648583.jpg",
+      tags: parsedTags,
     };
 
     return NextResponse.json(fakeResponse, { status: 200 });

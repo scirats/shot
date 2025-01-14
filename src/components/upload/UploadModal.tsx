@@ -11,6 +11,8 @@ const UploadModal: React.FC = () => {
     getInputProps,
     isDragActive,
     resetUploadState,
+    tags,
+    handleTagsChange
   } = useUpload();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -38,6 +40,8 @@ const UploadModal: React.FC = () => {
             getDropzoneProps={getRootProps}
             getInputProps={getInputProps}
             isDragActive={isDragActive}
+            tags={tags}
+            onTagsChange={handleTagsChange}
         />
       </div>
     </div>

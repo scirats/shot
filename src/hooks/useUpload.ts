@@ -1,12 +1,19 @@
 import { useFileUpload } from "./useFileUpload";
 import { useDragAndDrop } from "./useDragAndDrop";
+import {useTags} from "./useTags";
 
 export const useUpload = () => {
-  const { image, isFetching, isSuccess, uploadImage, resetUploadState } =
+  const { image, isFetching, isSuccess, uploadImage, resetUploadFileState } =
     useFileUpload();
+  const { tags, handleTagsChange, resetTags } = useTags();
 
   const { getRootProps, getInputProps, isDragActive } =
-    useDragAndDrop(uploadImage);
+    useDragAndDrop((file) => uploadImage(file, tags));
+
+  const resetUploadState = () => {
+    resetUploadFileState();
+    resetTags();
+  }
 
   return {
     image,
@@ -16,5 +23,7 @@ export const useUpload = () => {
     getInputProps,
     isDragActive,
     resetUploadState,
+    tags,
+    handleTagsChange
   };
 };
