@@ -2,10 +2,10 @@
 
 import Gallery from '@/components/gallery/Gallery';
 import GalleryModal from '@/components/gallery/GalleryModal';
-import useGallery from '@/hooks/useGallery';
+import useGalleryModal from '@/hooks/gallery/useGalleryModal';
 
 export default function Home() {
-  const { openModal, selectedItem, closeModal } = useGallery();
+  const { openModal, selectedItem, closeModal } = useGalleryModal();
   return (
     <div>
       <Gallery openModal={openModal} />

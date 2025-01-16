@@ -5,7 +5,7 @@ import UploadModal from "../upload/UploadModal";
 
 export default function Header() {
   return (
-    <header className='flex justify-between items-center p-4'>
+    <header className='flex justify-between items-center py-4'>
       <Image
         src="/logo.svg"
         alt="Shot Logo"

@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "url": "https://i.imgur.com/VZykeH4.jpeg",
+    "tags": ["dog", "pet", "cute"]
+  },
+  {
+    "id": 8,
+    "url": "https://i.imgur.com/ypR6GNe.jpg",
+    "tags": ["bird", "colorful", "wild"]
+  },
+  {
+    "id": 2,
+    "url": "https://i.imgur.com/XahADPL.jpeg",
+    "tags": ["dog", "pet", "cute"]
+  },
+  {
+    "id": 3,
+    "url": "https://i.imgur.com/VZykeH4.jpeg",
+    "tags": ["dog", "pet", "cute"]
+  },
+  {
+    "id": 6,
+    "url": "https://i.imgur.com/9FDeaIo.jpeg",
+    "tags": ["cat", "adorable", "fluffy"]
+  },
+  {
+    "id": 4,
+    "url": "https://i.imgur.com/VZykeH4.jpeg",
+    "tags": ["dog", "pet", "cute"]
+  },
+  {
+    "id": 5,
+    "url": "https://i.imgur.com/XahADPL.jpeg",
+    "tags": ["dog", "pet", "cute"]
+  },
+  {
+    "id": 7,
+    "url": "https://i.imgur.com/67tSocD.jpeg",
+    "tags": ["bird", "colorful", "wild"]
+  },
+  {
+    "id": 8,
+    "url": "https://i.imgur.com/L9ImWlp.jpeg",
+    "tags": ["bird", "colorful", "wild"]
+  },
+  {
+    "id": 8,
+    "url": "https://i.imgur.com/ypR6GNe.jpg",
+    "tags": ["bird", "colorful", "wild"]
+  },
+  {
+    "id": 9,
+    "url": "https://i.imgur.com/NBSth4j.jpeg",
+    "tags": ["cat", "adorable", "fluffy"]
+  },
+  {
+    "id": 8,
+    "url": "https://i.imgur.com/L9ImWlp.jpeg",
+    "tags": ["bird", "colorful", "wild"]
+  },
+  {
+    "id": 10,
+    "url": "https://i.imgur.com/9FDeaIo.jpeg",
+    "tags": ["cat", "adorable", "fluffy"]
+  },
+  {
+    "id": 11,
+    "url": "https://i.imgur.com/ypR6GNe.jpg",
+    "tags": ["bird", "adorable", "wild"]
+  },
+  {
+    "id": 11,
+    "url": "https://i.imgur.com/NBSth4j.jpeg",
+    "tags": ["cat", "adorable", "fluffy"]
+  },
+  {
+    "id": 8,
+    "url": "https://i.imgur.com/L9ImWlp.jpeg",
+    "tags": ["bird", "colorful", "wild"]
+  },
+  {
+    "id": 11,
+    "url": "https://i.imgur.com/9FDeaIo.jpeg",
+    "tags": ["cat", "adorable", "fluffy"]
+  },
+  {
+    "id": 8,
+    "url": "https://i.imgur.com/L9ImWlp.jpeg",
+    "tags": ["bird", "colorful", "wild"]
+  },
+  {
+    "id": 11,
+    "url": "https://i.imgur.com/NBSth4j.jpeg",
+    "tags": ["cat", "adorable", "fluffy"]
+  },
+  {
+    "id": 4,
+    "url": "https://i.imgur.com/VZykeH4.jpeg",
+    "tags": ["dog", "pet", "cute"]
+  },
+  {
+    "id": 5,
+    "url": "https://i.imgur.com/XahADPL.jpeg",
+    "tags": ["dog", "pet", "cute"]
+  },
+  {
+    "id": 12,
+    "url": "https://i.imgur.com/NBSth4j.jpeg",
+    "tags": ["cat", "adorable", "fluffy"]
+  }
+]

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {useUpload} from '@/hooks/useUpload';
+import {useUpload} from '@/hooks/upload/useUpload';
 import UploadContent from './UploadContent';
 
 const UploadModal: React.FC = () => {

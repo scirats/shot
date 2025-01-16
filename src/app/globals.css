@@ -29,3 +29,27 @@ body {
     @apply px-4 py-1 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-valleyoftears focus:border-valleyoftears text-gray-500
   }
 }
+
+@layer utilities {
+  @variants responsive {
+    .masonry {
+      column-gap: 1em;
+      column-count: 2;
+    }
+    .masonry-sm {
+      column-gap: 1em;
+      column-count: 4;
+    }
+    .masonry-md {
+      column-gap: 1em;
+      column-count: 5;
+    }
+    .masonry-lg {
+      column-gap: 1em;
+      column-count: 6;
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+  }
+}

@@ -3,7 +3,7 @@ type PreviewImageProps = {
 };
 
 const PreviewImage = ({imageUrl}: PreviewImageProps) => (
-  <div className="w-full h-80 flex justify-center items-center">
+  <div className="w-full flex justify-center items-center">
     <img
       src={imageUrl}
       alt="Preview"

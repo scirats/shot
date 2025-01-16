@@ -1,21 +1,35 @@
-import React from 'react';
+import React from "react";
+import useGallery from "@/hooks/gallery/useGallery";
+import { ImageData } from "@/types/ImageData";
 
 interface GalleryProps {
-  openModal: (item: string) => void;
+  openModal: (item: ImageData) => void;
 }
 
 const Gallery: React.FC<GalleryProps> = ({ openModal }) => {
-  const items = ['Item 1', 'Item 2', 'Item 3'];
+  const { images, isLoading, error } = useGallery();
+
+  if (isLoading) {
+    return <p>Loading images...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
 
   return (
-    <div className="grid grid-cols-3 gap-4 p-4">
-      {items.map((item, index) => (
+    <div className="masonry sm:masonry-sm md:masonry-md">
+      {images.map((image, index) => (
         <div
           key={index}
-          onClick={() => openModal(item)}
-          className="cursor-pointer bg-gray-200 hover:bg-gray-300 p-6 text-center"
+          onClick={() => openModal(image)}
+          className="cursor-pointer bg-white hover:bg-gray-300 p-4 mb-4 text-center break-inside"
         >
-          {item}
+          <img
+            src={image.url}
+            alt={`Image ${index + 1}`}
+            className="w-full h-full object-cover transition-transform duration-300"
+          />
         </div>
       ))}
     </div>
