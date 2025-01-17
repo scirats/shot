@@ -22,7 +22,7 @@ body {
 
 @layer components {
   button {
-    @apply bg-valleyoftears text-black px-4 py-1 border-2 border-gray-300 hover:border-valleyoftears;
+    @apply bg-valleyoftears text-black px-4 py-1 border-2 border-gray-400 hover:border-valleyoftears;
   }
 
   input {
