@@ -1,5 +1,4 @@
-import InputLink from "../shared/inputLink";
-import PreviewImage from "../shared/PreviewImage";
+import ModalContent from "../shared/ModalContent";
 import Dropzone from "./Dropzone";
 
 type UploadContentProps = {
@@ -35,13 +34,9 @@ const UploadContent = ({
     <div className="flex flex-col items-center gap-4">
       {isSuccess ? (
         <div className="text-center font-semibold">
-          <p>Uploaded Successfully!</p>
+          <p className="mb-4">Uploaded Successfully!</p>
           {image &&  
-            <>
-              <PreviewImage imageUrl={image.secure_url} /> 
-              <InputLink url={image.secure_url} />
-              {tags ? (<p className="text-sm text-gray-500 m-4">Tags: {tags.join(", ")}</p>) : (<></>)}
-            </>
+            <ModalContent url={image.secure_url} tags={tags}></ModalContent>
           }
         </div>
       ) : (
