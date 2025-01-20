@@ -20,9 +20,13 @@ export const useFileUpload = () => {
     setError(null);
 
     try {
-      const data = await uploadFile({file, tags});
-      setImage(data);
-      setIsSuccess(true);
+      const response = await uploadFile({file, tags});
+      if (response.success) {
+        setImage(response.data);
+        setIsSuccess(true);
+      } else {
+        setError(response.error);
+      }
     } catch (error) {
       console.error("Upload failed:", error);
       setError(error instanceof Error ? error.message : "Unknown error");

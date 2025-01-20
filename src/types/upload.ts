@@ -4,9 +4,9 @@ export interface UploadRequest {
 }
 
 export interface UploadResponse {
-  secure_url: string;
+  url: string;
 }
 
-export interface UploadError {
-  error: string;
-}
+export type APIResponse =
+  | {success: true; data: UploadResponse}
+  | {success: false; error: string};

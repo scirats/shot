@@ -1,13 +1,27 @@
-import {UploadRequest, UploadResponse} from "@/types/upload";
+import {APIResponse, UploadRequest, UploadResponse} from "@/types/upload";
 import {httpRequest} from "@/utils/httpRequest";
 
-export const uploadFile = ({ file, tags }: UploadRequest) => {
+export const uploadFile = async ({ file, tags }: UploadRequest): Promise<APIResponse> => {
   const formData = new FormData();
   formData.append("file", file);
   formData.append("tags", JSON.stringify(tags));
 
-  return httpRequest<UploadResponse>("/api/upload", {
-    method: "POST",
-    body: formData,
-  });
+  try {
+    const response = await httpRequest<UploadResponse>("/api/upload", {
+      method: "POST",
+      body: formData,
+    });
+
+    return {
+      success: true,
+      data: {
+        url: response.url,
+      },
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : "Unknown error" 
+    };
+  }
 };

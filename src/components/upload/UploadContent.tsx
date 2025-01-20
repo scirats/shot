@@ -4,7 +4,7 @@ import Dropzone from "./Dropzone";
 type UploadContentProps = {
   isFetching: boolean;
   isSuccess: boolean;
-  image: { secure_url: string } | null;
+  image: { url: string } | null;
   getDropzoneProps: () => any;
   getInputProps: () => any;
   isDragActive: boolean;
@@ -36,7 +36,7 @@ const UploadContent = ({
         <div className="text-center font-semibold">
           <p className="mb-4">Uploaded Successfully!</p>
           {image &&  
-            <ModalContent url={image.secure_url} tags={tags}></ModalContent>
+            <ModalContent url={image.url} tags={tags}></ModalContent>
           }
         </div>
       ) : (

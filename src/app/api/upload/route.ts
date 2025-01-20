@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     await new Promise(resolve => setTimeout(resolve, 3000));
 
     const fakeResponse = {
-      secure_url: "https://www.shutterstock.com/image-vector/img-vector-icon-design-on-260nw-2164648583.jpg",
+      url: "https://www.shutterstock.com/image-vector/img-vector-icon-design-on-260nw-2164648583.jpg",
       tags: parsedTags,
     };
 
